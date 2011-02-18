@@ -1,3 +1,6 @@
 #!/bin/sh
-string="`pwd`/$1"
-printf "%b\n" "$string" >> ~/.pick
+while [ $# -gt 0 ]; do
+    string="`pwd`/$1"
+    printf "%b\n" "$string" >> ~/.pick
+    shift
+done

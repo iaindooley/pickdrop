@@ -1,7 +1,4 @@
 #!/bin/sh
 pwd=`pwd`
-sed "s#^\(.*\)#cp \1 `pwd`#g" ~/.pick > ~/.drop
-chmod 700 ~/.drop
-~/.drop
-rm -f ~/.drop
+sed "s#^\(.*\)#cp \1 `pwd`#g" ~/.pick | sh
 rm -f ~/.pick

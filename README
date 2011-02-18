@@ -1,0 +1,34 @@
+Hi, I made this shell script so that I could
+pick up files as I wander about on the command
+line and then drop them in the same location.
+
+I thought you might like it, too. In order to
+install and use:
+
+chmod 755 pick && sudo cp pick /usr/bin/
+chmod 755 drop && sudo cp drop /usr/bin/
+
+then you can cruise around and do:
+
+pick filename
+cd otherdir
+pick otherfile
+... etc ...
+
+cd /home
+mkdir central && cd central
+drop
+
+It's not robust at all - it stores your picks
+in ~/.pick until you call drop at which time it
+uses the file paths in ~/.pick to create a new
+executable ~/.drop file to copy each of the
+files you picked to the current working
+directory.
+
+A good enhancement would be to allow multiple
+files to be picked at once:
+
+pick file1 file2 file3
+
+But who has time for loops in /bin/sh?!

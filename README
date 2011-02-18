@@ -10,7 +10,7 @@ chmod 755 drop && sudo cp drop /usr/bin/
 
 then you can cruise around and do:
 
-pick filename
+pick filename1 filename2
 cd otherdir
 pick otherfile
 ... etc ...
@@ -26,9 +26,16 @@ executable ~/.drop file to copy each of the
 files you picked to the current working
 directory.
 
-A good enhancement would be to allow multiple
-files to be picked at once:
+Thanks to André Paramés Pereira for the patch
+to run multiple files at once.
 
-pick file1 file2 file3
+git user erickworking added this gist:
 
-But who has time for loops in /bin/sh?!
+https://gist.github.com/833140
+
+"It allows multiple file selection and running
+arbitrary commands. The string {} is replaced
+by the file name in run (e.g. "run cp -v {} ."
+copies all the files to the current directory)."
+
+

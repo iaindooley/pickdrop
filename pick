@@ -1,0 +1,3 @@
+#!/bin/sh
+string="`pwd`/$1"
+printf "%b\n" "$string" >> ~/.pick

@@ -1,4 +1,2 @@
 #!/bin/sh
-pwd=`pwd`
-sed "s#^\(.*\)#cp \1 `pwd`#g" ~/.pick | sh
-rm -f ~/.pick
+xargs -0 -I'{}' cp '{}' . < ~/.pick && rm -f ~/.pick

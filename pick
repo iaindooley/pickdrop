@@ -1,6 +1,4 @@
 #!/bin/sh
-while [ $# -gt 0 ]; do
-    string="`pwd`/$1"
-    printf "%b\n" "$string" >> ~/.pick
-    shift
+for i; do
+    printf '%s/%s\0' "$PWD" "$i" >> ~/.pick
 done

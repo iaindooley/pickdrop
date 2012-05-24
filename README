@@ -5,8 +5,10 @@ line and then drop them in the same location.
 I thought you might like it, too. In order to
 install and use:
 
-chmod 755 pick && sudo cp pick /usr/bin/
-chmod 755 drop && sudo cp drop /usr/bin/
+git clone https://github.com/iaindooley/pickdrop.git &&
+cd pickdrop &&
+chmod +x install.sh &&
+./install.sh
 
 then you can cruise around and do:
 
